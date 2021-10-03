@@ -1,4 +1,4 @@
-Flask
-Python 3
-Scrapy
-Pip
+Flask==1.1.2
+Scrapy==2.5.0
+itemadapter==0.3.0
+beautifulsoup4==4.10.0
