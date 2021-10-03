@@ -1,0 +1,4 @@
+Flask
+Python 3
+Scrapy
+Pip
