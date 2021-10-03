@@ -6,6 +6,13 @@
     <h1>Use Arrow Keys to Cycle Through Live Streams</h1>
     <img id='video' src="{{ video_feed }}">
     <a href='/url/'><button id='next'>Next Live Stream</button></a>
+    <form action="{{ url_for('addfavorite') }}" method="post">
+      <input type="text" name="favorite" value={{ video_feed }}>
+      <button type="submit" id='favorite'>Favorite</button>
+    <h1 id='country'>{{ Country }}</h1>
+    <h1 id='region'>{{ Region }}</h1>
+    <h1 id='city'>{{ City }}</h1>
+  </form>
   </body>
 </html>
 
@@ -22,8 +29,35 @@
 #next {
   position: absolute;
   top: 95%;
-  left: 50%;
+  left: 80%;
   transform: translate(-50%, -50%);
 }
 
+#favorite {
+  position: absolute;
+  top: 95%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+
+#country {
+  position: absolute;
+  top: 92.5%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+
+#region {
+  position: absolute;
+  top: 92.5%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+#city {
+  position: absolute;
+  top: 92.5%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
 </style>

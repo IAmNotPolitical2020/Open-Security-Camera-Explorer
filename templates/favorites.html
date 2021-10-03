@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Security Project</title>
+  </head>
+  <body>
+    <h1>Use Arrow Keys to Cycle Through Live Streams</h1>
+    <img id='video' src="{{ video_feed }}">
+    <a href='/favorites/'><button id='next'>Next Live Stream</button></a>
+  </body>
+</html>
+
+<style>
+#video {
+  width: 100%;
+  height: 85%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#next {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
