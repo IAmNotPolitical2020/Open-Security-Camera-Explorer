@@ -5,6 +5,10 @@ import random
 import json
 import requests
 import re
+import webview
+import sys
+import threading
+
 
 app = Flask(__name__)
 
@@ -14,7 +18,6 @@ links = []
 @app.route("/", methods=['GET', 'POST'])
 def home():
     return render_template('index.html')
-
 
 @app.route("/data/", methods=['GET', 'POST'])
 def index():
@@ -69,5 +72,15 @@ def viewfavorite():
     print(currentchoice)
     return render_template('favorites.html', video_feed=currentchoice)
 
+def start_server():
+    app.run(host='127.0.0.1', port='5000', debug=False)
+
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port='5000', debug=True)
+
+    t = threading.Thread(target=start_server)
+    t.daemon = True
+    t.start()
+
+    webview.create_window('Open Security Cameras Explorer', 'http://127.0.0.1:5000/')
+    webview.start()
+    sys.exit()
