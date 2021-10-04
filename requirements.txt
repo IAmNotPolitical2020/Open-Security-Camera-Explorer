@@ -1,4 +1,7 @@
-Flask==1.1.2
-Scrapy==2.5.0
+requests==2.26.0
 itemadapter==0.3.0
+Scrapy==2.5.0
+pywebview==3.5
+Flask==1.1.2
 beautifulsoup4==4.10.0
+webview==0.1.5
