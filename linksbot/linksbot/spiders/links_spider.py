@@ -28,7 +28,6 @@ class LinksSpider(scrapy.Spider):
             for line in lines:
                 urls.append(line)
         for i in range(10):
-            #print('here')
             yield scrapy.Request(url=random.choice(urls), callback=self.parse)
 
     def parse(self, response):
@@ -37,12 +36,7 @@ class LinksSpider(scrapy.Spider):
         for a in soup.find_all('a', href=True):
             currentlink = str(a['href'])
             if 'http' in currentlink:
-                #print(currentlink)
                 linkstoscrapelist.append(currentlink)
-                #print(currentlink)
-            #elif 'http' in currentlink:
-            #    print(currentlink)
-            #    linkstoscrapelist.append(currentlink)
             else:
                 pass
 
@@ -54,10 +48,6 @@ class LinksSpider(scrapy.Spider):
                 global linkstxt
                 with open("links.txt","a") as linkstxt:
                     linkstxt.writelines(currentlink + '\n')
-                #print(currentlink)
-            #elif 'http' in currentlink:
-            #    print(currentlink)
-            #    linkstoscrapelist.append(currentlink)
             else:
                 pass
 
@@ -67,4 +57,3 @@ class LinksSpider(scrapy.Spider):
                 pass
             else:
                 yield scrapy.Request(link, callback=self.parse)
-#linkstxt.close()
