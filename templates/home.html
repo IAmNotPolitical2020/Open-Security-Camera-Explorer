@@ -2,7 +2,7 @@
   <head>
     <title>Security Project</title>
   </head>
-  <body>
+  <body style='background-color: white;'>
     <h1>Use Arrow Keys to Cycle Through Live Streams</h1>
     <img id='video' src="{{ video_feed }}">
     <a href='/url/'><button id='next'>Next Live Stream</button></a>
@@ -27,16 +27,48 @@
 }
 
 #next {
+  transition-duration: 0.4s;
+  background-color: white;
+  color: black;
+  font-size: 1.5em;
+  border: 7px solid #008CBA;
   position: absolute;
   top: 95%;
-  left: 80%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+#next:hover {
+  background-color: #008CBA;
+  color: white;
+  font-size: 1.5em;
+  border: 7px solid #008CBA;
+  position: absolute;
+  top: 95%;
+  left: 75%;
   transform: translate(-50%, -50%);
 }
 
 #favorite {
+  transition-duration: 0.4s;
+  background-color: white;
+  color: black;
+  font-size: 1.5em;
+  border: 7px solid #008CBA;
   position: absolute;
   top: 95%;
-  left: 90%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+}
+
+#favorite:hover {
+  background-color: #008CBA;
+  color: white;
+  font-size: 1.5em;
+  border: 7px solid #008CBA;
+  position: absolute;
+  top: 95%;
+  left: 95%;
   transform: translate(-50%, -50%);
 }
 
