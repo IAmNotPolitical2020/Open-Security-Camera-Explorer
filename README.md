@@ -8,6 +8,6 @@ Using this project:
 3. Download python pip by using "curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py" and "python get-pip.py" after
 4. Download and extract the .zip project file
 5. Cd into the file's directory in a command line
-6. Download the required packages by using "pip requirements.txt"
+6. Download the required packages by using "pip install -r requirements.txt"
 7. If you recieve an error from pip, download the Microsoft C++ Build Tool on this link https://visualstudio.microsoft.com/visual-cpp-build-tools/ and try installing requirements again after downloading it
 8. Run "python main.py" file to start program and the app should load automatically from there
