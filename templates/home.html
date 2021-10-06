@@ -2,28 +2,41 @@
   <head>
     <title>Security Project</title>
   </head>
-  <body style='background-color: white;'>
-    <h1>Use Arrow Keys to Cycle Through Live Streams</h1>
+  <body style='background-color: black;'>
+    <h1 id='toptext'>Use Arrow Keys to Cycle Through Live Streams</h1>
     <img id='video' src="{{ video_feed }}">
     <a href='/url/'><button id='next'>Next Live Stream</button></a>
     <form action="{{ url_for('addfavorite') }}" method="post">
       <input type="text" name="favorite" value={{ video_feed }}>
       <button type="submit" id='favorite'>Favorite</button>
-    <h1 id='country'>{{ Country }}</h1>
-    <h1 id='region'>{{ Region }}</h1>
-    <h1 id='city'>{{ City }}</h1>
+    <h1 id='country'>Country: {{ Country }}     Region: {{ Region }}     City: {{ City }}</h1>
   </form>
   </body>
 </html>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@1,500&display=swap');
+
+#toptext {
+  position: absolute;
+  top: 2.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Prompt', sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  color: white;
+}
+
 #video {
   width: 100%;
-  height: 85%;
+  height: 75%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: 'Prompt', sans-serif;
 }
 
 #next {
@@ -33,9 +46,10 @@
   font-size: 1.5em;
   border: 7px solid #008CBA;
   position: absolute;
-  top: 95%;
+  top: 92.5%;
   left: 75%;
   transform: translate(-50%, -50%);
+  font-family: 'Prompt', sans-serif;
 }
 
 #next:hover {
@@ -44,9 +58,10 @@
   font-size: 1.5em;
   border: 7px solid #008CBA;
   position: absolute;
-  top: 95%;
+  top: 92.5%;
   left: 75%;
   transform: translate(-50%, -50%);
+  font-family: 'Prompt', sans-serif;
 }
 
 #favorite {
@@ -56,9 +71,10 @@
   font-size: 1.5em;
   border: 7px solid #008CBA;
   position: absolute;
-  top: 95%;
+  top: 92.5%;
   left: 95%;
   transform: translate(-50%, -50%);
+  font-family: 'Prompt', sans-serif;
 }
 
 #favorite:hover {
@@ -67,29 +83,37 @@
   font-size: 1.5em;
   border: 7px solid #008CBA;
   position: absolute;
-  top: 95%;
+  top: 92.5%;
   left: 95%;
   transform: translate(-50%, -50%);
+  font-family: 'Prompt', sans-serif;
 }
 
 #country {
+  font-size: 2.0em;
   position: absolute;
-  top: 92.5%;
-  left: 15%;
+  top: 90%;
+  left: 30%;
   transform: translate(-50%, -50%);
+  font-family: 'Prompt', sans-serif;
+  color: white;
 }
 
 #region {
   position: absolute;
   top: 92.5%;
-  left: 35%;
+  left: 25%;
   transform: translate(-50%, -50%);
+  font-family: 'Prompt', sans-serif;
+  color: white;
 }
 
 #city {
   position: absolute;
   top: 92.5%;
-  left: 55%;
+  left: 45%;
   transform: translate(-50%, -50%);
+  font-family: 'Prompt', sans-serif;
+  color: white;
 }
 </style>
