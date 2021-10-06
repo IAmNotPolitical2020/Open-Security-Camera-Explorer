@@ -11,3 +11,6 @@ Using this project:
 6. Download the required packages by using "pip install -r requirements.txt"
 7. If you recieve an error from pip, download the Microsoft C++ Build Tool on this link https://visualstudio.microsoft.com/visual-cpp-build-tools/ and try installing requirements again after downloading it
 8. Run "python main.py" file to start program and the app should load automatically from there
+
+Note:
+Please ethically use this project and know the purpose is to educate people about the state of cybersecuity in the world today. By using this project, the creators are not responsible for what it is used for and any use of the project is allowed under the condition you abide by these rules.
