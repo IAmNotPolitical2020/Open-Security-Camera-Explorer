@@ -14,3 +14,4 @@ Using this project:
 
 Note:
 Please ethically use this project and know the purpose is to educate people about the state of cybersecuity in the world today. By using this project, the creators are not responsible for what it is used for and any use of the project is allowed under the condition you abide by these rules.
+All information displayed by this program is sourced through a third party software and the creators of the project have no control over what is shown. Keep this in mind when using this program. All information is public and no bruteforcing or any other method was used to gain access to the cameras.
